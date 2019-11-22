@@ -23,7 +23,7 @@ export default class Registration extends Component {
     }
     handleSubmit = (e)=>{
         e.preventDefault();
-        axios.post("https://arun-auth.herokuapp.com//api/registration", {
+        axios.post("https://arun-auth.herokuapp.com/api/registration", {
             email: this.state.email,
             password:this.state.password,
             name:this.state.password
