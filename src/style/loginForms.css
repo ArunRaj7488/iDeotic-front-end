@@ -1,0 +1,12 @@
+.log-dis{
+    display:flex;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+}
+.log-bg{
+    box-shadow: 2px 2px 2px #ccc;
+            border-radius: 10px; 
+            background-color:rgba(255,255,255,.5);
+            padding:20px;
+}

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Form, Button} from "react-bootstrap";
 import axios from "axios"
 import {Redirect} from "react-router-dom";
+import "../style/regForm.css";
 
 export default class Registration extends Component {
     
@@ -53,7 +54,8 @@ export default class Registration extends Component {
     render(){
         
         return (
-            <div>
+            <div  className="rgs-style" >
+                <div className="reg-bg" >
                 <h1>Registration Form</h1>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
@@ -71,10 +73,12 @@ export default class Registration extends Component {
                         <Form.Control name="password" type="password" placeholder="Password"  onChange={(e)=>this.handleChange(e)} />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</Button>
+                    <Button variant="danger" className="m-2" type="submit" onClick={(e)=>this.handleSubmit(e)}>Create Account</Button>
+                    <Button variant="dark" onClick={(e)=>window.location.pathname = "/"}>Login</Button>
+                
                 </Form>
             </div>
-
+            </div>
         )
     }
 

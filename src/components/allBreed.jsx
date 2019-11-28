@@ -2,6 +2,7 @@ import React from "react";
 import {ListGroup, Button}  from "react-bootstrap"
 import axios from "axios";
 import {Link} from "react-router-dom";
+import "../style/allBreads.css";
 
 export default class AllBreeds extends React.Component{
     constructor(props){
@@ -27,14 +28,22 @@ export default class AllBreeds extends React.Component{
     }
     render(){
         return (
-            <div>
-                <h1>All Breeds</h1>
-                <a className="btn btn-danger m-2" onClick={()=>this.handleLogout()}>logout</a>
-
-                <ListGroup>    
-                    {this.state.data.map((item, i)=><ListGroup.Item key={i} onClick={()=>this.handleClick(item)}>{item}</ListGroup.Item>)}
-                </ListGroup>
-            </div>
+                      <div className="allBreads-bg">  
+                        <div className="container">
+                        <div calssName="allBreads-dis">            
+                         <h1 style={{color:"#fff"}}>All Breeds</h1>            
+                            <a style={{color:"#fff", cursor:"pointer"}} className="btn btn-danger m-2" onClick={()=>this.handleLogout()}>logout</a>
+                        </div>
+                    <ListGroup>    
+                        {this.state.data.map((item, i)=><ListGroup.Item 
+                        className="list-item"
+                        style={{
+                            cursor:"pointer"
+                        }} 
+                        key={i} onClick={()=>this.handleClick(item)}>{item}</ListGroup.Item>)}
+                    </ListGroup>
+                    </div>
+                </div>
         )
     }
 

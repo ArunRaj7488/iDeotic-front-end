@@ -1,6 +1,7 @@
 import React from "react";
-import { Image } from "react-bootstrap";
+import { Image, Button } from "react-bootstrap";
 import Axios from "axios";
+import "../style/imageView.css"
 
 export  default class ImageView extends React.Component{
  
@@ -24,15 +25,12 @@ export  default class ImageView extends React.Component{
 
     render() {
         return(
-            <div className="container">
-                <h1>{this.state.cat}</h1>
-        {console.log(this.state.url)
-    }
-                <Image 
-                src={this.state.url} fluid/>
-
-                
-                
+            <div className="img-bg">
+                <div className="img-dis">
+                <h1 style={{textAlign:"center"}}>{this.state.cat.toUpperCase()}</h1>
+                <Image src={this.state.url}  className="img-src" alt="IMG" />
+            </div>
+            <Button variant="danger" onClick={(e)=>window.location.pathname = "/all"}>Back</Button>
             </div>
         ) 
     }

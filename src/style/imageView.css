@@ -1,0 +1,17 @@
+.img-bg{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-image:linear-gradient(to right, #0F2027 ,#203A43, #2C5364)
+}
+.img-dis{
+    background-color: rgba(255,255,255,.8);
+     padding:10px;
+     border-radius:10px;
+}
+.img-src{
+    width:350px; 
+    height:350px;
+}

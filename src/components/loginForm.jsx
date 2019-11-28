@@ -2,6 +2,8 @@ import React from "react";
 import {Form, Button} from "react-bootstrap"
 import axios from "axios";
 import {Link} from "react-router-dom"
+import "../style/loginForms.css"
+
 
 export default class LoginForm extends React.Component {
 
@@ -12,11 +14,10 @@ export default class LoginForm extends React.Component {
             password:"",
             data:[]
          };
-
-         console.log(`document.cookie`, document.cookie)
-         if(document.cookie.length>8){
+        console.log(`document.cookie`, document.cookie)
+        if(document.cookie.length>8){
              document.location.pathname="/all"
-         }
+        }
     }
 
     handleChange = (e)=>{
@@ -55,22 +56,25 @@ export default class LoginForm extends React.Component {
     render(){
         const { formTitle } = this.props;
         return (
-            <div>
-                <h1>{formTitle}</h1>
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="Enter email" onChange={(e)=>this.handleChange(e)} />
-                    </Form.Group>
+            <div className="log-dis"> 
+                <div className="log-bg">
+                  <h1>Login Form</h1>
+                   <h1>{formTitle}</h1>
+                   <Form >
+                     <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control name="email" type="email" placeholder="Enter email" onChange={(e)=>this.handleChange(e)} />
+                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control name="password" type="password" placeholder="Password"  onChange={(e)=>this.handleChange(e)} />
-                    </Form.Group>
+                     </Form.Group>
 
-                    <Button variant="primary" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</Button>
+                   <Button variant="danger" type="submit" onClick={(e)=>this.handleSubmit(e)}>Submit</Button>
                     <a className="btn btn-dark m-2" href="/signup">signup</a>
                 </Form>
+                </div>    
             </div>
         )
     }
