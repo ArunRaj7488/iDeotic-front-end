@@ -18,7 +18,6 @@ export  default class ImageView extends React.Component{
         let url = "";
         Axios.get(`https://dog.ceo/api/breed/${cat}/images/random`).then(data=>{
             url = data.data.message;
-            // console.log(data)
             this.setState({url, cat})
         });
     }
@@ -27,10 +26,10 @@ export  default class ImageView extends React.Component{
         return(
             <div className="img-bg">
                 <div className="img-dis">
-                <h1 style={{textAlign:"center"}}>{this.state.cat.toUpperCase()}</h1>
-                <Image src={this.state.url}  className="img-src" alt="IMG" />
-            </div>
-            <Button variant="danger" onClick={(e)=>window.location.pathname = "/all"}>Back</Button>
+                    <h1 style={{textAlign:"center"}}>{this.state.cat.toUpperCase()}</h1>
+                    <Image src={this.state.url}  className="img-src" alt="IMG" />
+                </div>
+                <Button variant="danger" className="m-2" onClick={(e)=>window.location.pathname = "/all"}>Back</Button>
             </div>
         ) 
     }

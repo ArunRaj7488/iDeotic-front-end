@@ -14,4 +14,9 @@
 .img-src{
     width:350px; 
     height:350px;
+    transition: all ease-in-out .2s;
+}
+.img-src:hover{
+    width:450px; 
+    height:450px;
 }

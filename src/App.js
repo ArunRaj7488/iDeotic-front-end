@@ -11,7 +11,7 @@ class App extends Component {
   
   render() {
     return (
-        <div className="App-bg">      
+        <div className="App-bg" >      
         <Switch>
           <Route path="/signup" component={Registration}></Route>
           <Route path="/all" component={AllBreeds}></Route>

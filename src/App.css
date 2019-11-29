@@ -1,5 +1,6 @@
 .App-bg{
-  background:url(https://cdn.pixabay.com/photo/2016/11/21/00/47/view-1844110_960_720.jpg);
-          background-size:cover;
+  /* background:url(https://pixabay.com/get/57e8d1474b53ac14ea9d8579c32c3078153dc3e45656754072287dd09e/view-1844110.jpg); */
+  background-size:cover;
+  background-image: url("./assets/images/dog1.jpg")
        
 }
