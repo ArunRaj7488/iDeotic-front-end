@@ -11,6 +11,9 @@ export  default class ImageView extends React.Component{
             cat:"",
             url:""
         }
+        if(document.cookie.length<8){
+            document.location.pathname="/"
+       }
     }
     componentDidMount() {
         const path = window.location.pathname;

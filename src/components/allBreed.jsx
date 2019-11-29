@@ -10,6 +10,9 @@ export default class AllBreeds extends React.Component{
         this.state ={
             data:[]
         }
+        if(document.cookie.length<8){
+            document.location.pathname="/"
+       }
     }
     async componentWillMount(){
         const {data} = await axios.get("https://dog.ceo/api/breeds/list/all");
