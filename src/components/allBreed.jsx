@@ -10,9 +10,11 @@ export default class AllBreeds extends React.Component{
         this.state ={
             data:[]
         }
-        if(document.cookie.length<8){
+        if(document.cookie.length<=8){
             document.location.pathname="/"
        }
+
+       console.log(document.cookie.length)
     }
     async componentWillMount(){
         const {data} = await axios.get("https://dog.ceo/api/breeds/list/all");
@@ -25,6 +27,7 @@ export default class AllBreeds extends React.Component{
     }
     //for logout
     handleLogout = () =>{
+        console.log(document.cookie)
         document.cookie="isLogin=";
         //alert(document.cookie);
         window.location.pathname='/'
