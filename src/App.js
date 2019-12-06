@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-
 import LoginForm from "../src/components//loginForm";
 import Registration from "../src/components/registratio";
 import AllBreeds from "../src/components/allBreed";
 import Image from "../src/components/imgView";
 import {Route, Switch} from "react-router-dom"
 import "./App.css";
-
 class App extends Component {
   
   render() {

@@ -27,7 +27,7 @@ export default class Registration extends Component {
         axios.post("https://arun-auth.herokuapp.com/api/registration", {
             email: this.state.email,
             password:this.state.password,
-            name:this.state.password
+            name:this.state.name
         },
         {
          headers: {
@@ -45,9 +45,9 @@ export default class Registration extends Component {
         console.log({
                 email: this.state.email,
                 password:this.state.password,
-                name:this.state.password
+                name:this.state.name
             })
-    
+
 
     }
     

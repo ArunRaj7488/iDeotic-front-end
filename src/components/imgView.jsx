@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Button } from "react-bootstrap";
 import Axios from "axios";
-import "../style/imageView.css"
+import "../style/imageView.css";
 
 export  default class ImageView extends React.Component{
  
